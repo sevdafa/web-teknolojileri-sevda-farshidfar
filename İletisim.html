@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="genel.css">
+	<script src="main.js"></script>
+	<title>İletişim</title>
+  </head>
+<body>
+  <div class ="container" style="margin-top:20px">
+		<div class="row">
+			<div class="col-md-0"></div>
+      <div class="col-md-2"><h1><a href="Hakkımda.html">Hakkımda</h1></a></div>
+			<div class="col-md-2"><h1><a href="Ozgeçmişim.html">Özgeçmişim</h1></a></div>
+			<div class="col-md-2"><h1><a href="Şehrim.html">Şehrim</h1></a></div>
+			<div class="col-md-2"><h1><a href="Mirasımız.html">Mirasımız</h1></a></div>
+			<div class="col-md-1"><h1><a href="İletisim.html">İletişim</h1></a></div>
+      <div class="col-md-2"><h1><a href="İlgiAlanlarım.html">İlgi Alanlarım</h1></a></div>
+      <div class="col-md-1"><h1><a href="login.html">Login</h1></a></div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+    <hr>
+	<div class="iletisim" >
+	<table border=2 align="center" style="color:#dcffff;float:left">
+			<form  name="secim" method="POST">
+		<tr>
+			<th colspan=3 style="text-align:center;">
+				İLETİŞİM BİLGİLERİ
+			</th>
+		</tr>
+		<tr>
+			<th>
+				İSİM
+			</th>
+			<td>
+			<input type="text" name="isim" style="color:black; font-weight:bold;width:500px;background-color:white"  placeholder="İsim" id="isim">
+			</td>
+
+
+
+		</tr>
+
+
+		<tr>
+			<th>
+				SOYİSİM
+			</th>
+			<td>
+				<input type="text" style="color:black; font-weight:bold;width:500px;background-color:white"  placeholder="Soyisim" id="Soyisim">
+			</td>
+
+
+		</tr>
+		<tr>
+			<th>
+				E-MAİL
+			</th>
+			<td>
+				<input type="email" style="color:black;font-weight:bold;width:500px;" placeholder="E-Posta" id="Eposta" name="email">
+			</td>
+
+
+		</tr>
+
+		<tr>
+			<th>
+				TELEFON
+			</th>
+			<td>
+				<input type="tel" style="color:black; font-weight:bold;width:500px;background-color:white"  placeholder="Tel-No" id="TelNo">
+			</td>
+
+
+		</tr>
+		<tr>
+			<th>
+				Doğum Tarihi
+			</th>
+			<td colspan=2>
+				<input type="date" style="color:black;font-weight:bold;width:500px"  id="DogumTarihi">
+			</td>
+
+
+		</tr>
+		<tr>
+			<th>
+				Size Nereden Ulaşırım?
+			</th>
+			<td colspan=2>
+					<select style="color:black;font-weight:bold;width:100%" id="select">
+
+							<option > E mail</option>
+
+								<option >Telefon</option>
+
+
+
+						</select>
+			</td>
+
+
+		</tr>
+		<tr>
+			<th>
+				Cinsiyet
+			</th>
+			<td colspan=2>
+
+				<input type="radio" name="cinsiyet" value="Erkek" > Erkek<br/>
+				<input type="radio" name="cinsiyet" value="Kadın"> Kadın<br/>
+				<input type="radio" name="cinsiyet" value="Belirsiz"> Belirsiz<br/>
+
+
+
+
+			</td>
+		</tr>
+		<tr>
+			<th>
+				MESAJINIZ
+			</th>
+			<td colspan=2>
+		<textarea style="max-width:100%;max-height:100px;min-width:70%;min-height:70px; " id="Mesaj"></textarea><br/>
+
+			</td>
+		</tr>
+		<tr>
+			<th>
+
+			</th>
+			<td colspan=2>
+					<button type="button" class="btn btn-primary" onclick="temizle()">Temizle</button>	<input type="button" onclick="gonder(this)" style="margin-left:20px" class="btn btn-primary" value="Gonder" ><button type="button" onclick="İletisimKontrol()" style="margin-left:140px" class="btn btn-success">İletisim Kontrol</button>
+			</td>
+		</tr>
+		<tr>
+				<th>
+
+				</th>
+				<td>
+					<div id="uyari" style="width:250px;height:60px;color:white;font-weight:bold ;margin-left:50px"></div>
+				</td>
+			</tr>
+			<tr>
+				</form>
+	</table>
+
+	<div class="uyarilar">
+		<div class="uyari1" id="isimuyari"></div>
+		<div class="uyari1" id="soyisimuyari"></div>
+		<div class="uyari1" id="Epostauyari"></div>
+		<div class="uyari1" id="TelNouyari"></div>
+		<div class="uyari1" id="DogumTarihiUyari"></div>
+		<div class="uyari1" id="SizeNeredenUlasırım"></div>
+		<div class="uyari2" id="CinsiyetUyari"></div>
+		<div class="uyari3" id="Mesajuyari"></div>
+
+	</div>
+
+
+</div>
+
+</body>
+</html>
